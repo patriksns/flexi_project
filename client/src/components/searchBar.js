@@ -27,7 +27,24 @@ class SearchBar extends Component {
           obj.filter((item) => (
             item.nazFirmy.toLowerCase().includes(query) ||
             item.kod.toLowerCase().includes(query) ||
-            item.kontaktJmeno.toLowerCase().includes(query)
+            item.kontaktJmeno.toLowerCase().includes(query) ||
+
+            item.faUlice.toLowerCase().includes(query) ||
+            item.faPsc.toLowerCase().includes(query) ||
+            item.faMesto.toLowerCase().includes(query) ||
+            // item['faStat@showAs'].toLowerCase().includes(query) ||
+
+            item.ic.toLowerCase().includes(query) ||
+            item.dic.toLowerCase().includes(query) ||
+            // item['formaDopravy@showAs'].toLowerCase().includes(query) ||
+            // item.zpusobPlatby.toLowerCase().includes(query) ||     ????
+            // item['stavUzivK@showAs'].toLowerCase().includes(query) ||
+
+            // item.polozka.kod.toLowerCase().includes(query) ||
+            // item.polozka.nazev.toLowerCase().includes(query) ||
+
+            item.sumCelkem.toLowerCase().includes(query)
+            // item.faktura.toLowerCase().includes(query)
           ))
         ));
   
@@ -43,8 +60,8 @@ class SearchBar extends Component {
     return (
       <div>
         <input
-          type="text"
-          placeholder="Vyhledat podle názvu"
+          type=""
+          placeholder="Vyhledávání ..."
           value={this.state.query}
           onChange={this.handleInputChange}
         />
